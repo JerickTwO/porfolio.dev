@@ -1,16 +1,24 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import Css from "./icons/Css.astro"
-import Bootstrap from "./icons/Bootstrap.astro"
-import Html from "./icons/Html.astro"
-import Python from "./icons/Python.astro"
-import Django from "./icons/Django.astro"
-import Laravel from "./icons/Laravel.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
-
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Css from "./icons/Css.astro";
+import Bootstrap from "./icons/Bootstrap.astro";
+import Html from "./icons/Html.astro";
+import Python from "./icons/Python.astro";
+import Django from "./icons/Django.astro";
+import Laravel from "./icons/Laravel.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import React from "./icons/React.astro";
+import Spring from "./icons/Spring.astro";
+import Docker from "./icons/Docker.astro";
+import Prometheus from "./icons/Prometheus.astro";
+import Grafana from "./icons/Grafana.astro";
+import Angular from "./icons/Angular.astro";
+import Mysql from "./icons/Mysql.astro";
+import Postgre from "./icons/Postgresql.astro";
+import Mongo from "./icons/Mongo.astro";
 const TAGS = {
   NEXT: {
     name: "Next.js",
@@ -47,84 +55,141 @@ const TAGS = {
     class: "bg-zinc-800 text-white ",
     icon: Django,
   },
-  LARAVEL:{
+  LARAVEL: {
     name: "Laravel",
     class: "bg-zinc-800 text-white ",
     icon: Laravel,
   },
-}
+  ANGULAR: {
+    name: "Angular",
+    class: "bg-zinc-800 text-white ",
+    icon: Angular,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-zinc-800 text-white ",
+    icon: React,
+  },
+  DOCKER: {
+    name: "Docker",
+    class: "bg-zinc-800 text-white ",
+    icon: Docker,
+  },
+  SPRING: {
+    name: "Spring",
+    class: "bg-zinc-800 text-white ",
+    icon: Spring,
+  },
+  PROMETHEUS: {
+    name: "Prometheus",
+    class: "bg-zinc-800 text-white ",
+    icon: Prometheus,
+  },
+  GRAFANA: {
+    name: "Grafana",
+    class: "bg-zinc-800 text-white ",
+    icon: Grafana,
+  },
+  MYSQL: {
+    name: "Mysql",
+    class: "bg-zinc-800 text-white ",
+    icon: Mysql,
+  },
+  MONGO: {
+    name: "Mongo",
+    class: "bg-zinc-800 text-white ",
+    icon: Mongo,
+  },
+  POSTGRES: {
+    name: "Postgres",
+    class: "bg-zinc-800 text-white ",
+    icon: Postgre,
+  },
+};
 const PROJECTS = [
   {
-    title: "BarberForMens - Aplicación Web de práctica para llevar gestión de una barbería ",
+    title: "Sistema de Gestión de Tesis - Sistema Universitario",
     description:
-    "Este proyecto fue desarrollado mediante el uso del framework Django y el lenguaje de programación Python. Para mejorar la experiencia del usuario, se aplicaron estilos estéticos y funcionales utilizando Bootstrap, asegurando así un diseño moderno y adaptativo.",
+      "Para un diseño moderno y responsivo se aplicaron estilos con Tailwind y Bootstrap, junto con componentes condicionales y reutilizables que optimizan el rendimiento. En el backend se implementa JWT para la autenticación y Bcrypt para encriptar contraseñas, garantizando escalabilidad y seguridad.",
     link: "#",
     github: "#",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.DJANGO, TAGS.PYTHON, TAGS.BOOTSTRAP],
+    image: "/projects/unamba.png",
+    tags: [TAGS.SPRING, TAGS.REACT, TAGS.MYSQL, TAGS.DOCKER],
   },
-   {
-    title: "KanbanBard + Drag and Drop - Aplicación Web ",
+  {
+    title: "Security Monitoring - Monitoreo de SGBD ",
+    description:
+      "Visualizar paneles personalizados en Grafana para una o varias bases de datos combinadas. El backend está construido con Boot Spring y usa Prometheus y Grafana para recopilar y visualizar las métricas de base de datos seleccionadas.",
+    link: "#",
+    github: "#",
+    image: "/projects/security-monitoring.png",
+    tags: [TAGS.SPRING, TAGS.DOCKER, TAGS.GRAFANA, TAGS.MONGO],
+  },
+  {
+    title: "LabReservas - Sistema Universitario ",
     description:
       "Este proyecto fue desarrollado mediante el uso del framework Laravel y usando una base de datos MYSQL en el que se realizó un KanbanBoard usando el concepto del Drag and Drop  se aplicaron todos los metodos del CRUD en el proyecto y se usaron estilos usando Tailwind de una manera estética y funcional",
     link: "#",
     github: "#",
-    image: "/projects/todo.webp",
-    tags: [TAGS.LARAVEL, TAGS.TAILWIND],
+    image: "/projects/reserva-laboratorios.png",
+    tags: [TAGS.ANGULAR, TAGS.SPRING, TAGS.MYSQL],
   },
-]
+];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, link, github }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
-            <LinkButton href={github}>
-              <GitHub class="size-6" />
-              Code
-              
-            </LinkButton>
-          )}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
     ))
   }
 </div>
-
-
-
